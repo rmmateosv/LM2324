@@ -5,6 +5,18 @@
 		<title>Apuntes</title>
 	</head>
 	<body>
+		<!-- MARCADORES -->
+		<a id="inicio"/>
+		<h1>Índice</h1>
+		<ul>
+			<li><a href="#parrafo">Párrafos</a></li>
+			<li><a href="#titulos">Títulos</a></li>
+			<li><a href="#lineasH">Líneas Horizontales</a></li>
+			<li><a href="#marcado">Marcado de texto</a></li>
+			<li><a href="#listas">Listas</a></li>
+			<li><a href="#enlaces">Enlaces</a></li>
+		</ul>
+		
 	<!-- esto es un comentario
 		que puede ocupar varias líneas-->
 		
@@ -18,6 +30,7 @@
 		sí podemos poner varios espacios consecutivos.
 		
 		<!-- PÁRRAFOS -->
+		<a id="parrafo"/><h1>PÁRRAFOS</h1><a href="#inicio">Volver</a>
 		<p>
 		Un párrafo es un conjunto de líneas.
 		Aunque se introduzcan saltos de línea entre
@@ -28,6 +41,7 @@
 		Esto es otro párrafo.
 		</p>
 		<!-- TÍTULOS-->
+		<a id="titulos"/><h1>TÍTULOS</h1><a href="#inicio">Volver</a>
 		<h1>Título de nivel 1</h1>
 		<h2>Título de nivel 2</h2>
 		<h3>Título de nivel 3</h3>
@@ -36,13 +50,16 @@
 		<h6>Título de nivel 6</h6>
 		
 		<!-- LÍNEAS HORIZONTALES -->
+		<a id="lineasH"/><h1>LÍNEAS HORIZONTALES</h1><a href="#inicio">Volver</a>
 		<p>
 			<h1>Tema 2</h1><hr/>Aprendiendo HTML
 		</p>
 		
 		<!-- Marcado de texto-->
 		<div>
-			<h1>Marcado de texto</h1>
+			<a id="marcado"/><h1>Marcado de texto</h1>
+			<a href="#inicio">Volver</a>
+			<br/>
 			Tipo de marcado <b>negrita</b><br/>
 			Tipo de marcado <strong>strong</strong><br/>
 			Tipo de marcado <em>énfasis</em><br/>
@@ -53,6 +70,7 @@
 		</div>
 		
 		<!-- Listas -->
+		<a id="listas"/><h1>LISTAS</h1><a href="#inicio">Volver</a>
 		<div>
 			<h1>Mis asignaturas favoritas</h1>
 			<!-- Listas no ordenadas -->
@@ -107,12 +125,37 @@
 		</div>
 		<!-- ENLACES EXTERNOS -->
 		<div>
-			<h1>ENLACES EXTERNOS</h1>
+			<a id="enlaces"/><h1>ENLACES EXTERNOS</h1>
+			<a href="#inicio">Volver</a>
+			<br/>
 			Enlace externo a la pagina web del instituto:
 					<a  href="https://iesaugustobriga.educarex.es/"
 					target="_blank">IES Augustóbriga</a><br/>
 			Enlace externo a <a href="Ejercicio1.html" target="_blank">ejercicio1</a><br/>
 			Enlace externo a <a href="enlaces/aa.html" target="_blank">enlaces/aa.html</a><br/>
+		</div>
+		
+		<!-- IMÁGENES -->
+		<div>
+			<h1>MOSTRAR UNA IMAGEN CON FORMATO PNG</h1>
+			<img src="img/perro.png" alt="Imagen Perro" width="50%"/>
+			<img src="img/perro.png" alt="Imagen Perro" width="200px"/>
+			<img src="img/perro.png" alt="Imagen Perro" width="200px" height="50px"/>
+		</div>
+		<div>
+			<h1>MOSTRAR UNA IMAGEN CON FORMATO SVG</h1>
+			<img src="img/perro.svg" alt="Imagen Perro" width="50%"/>
+			<!-- Con formato svg no se pixela -->
+			<!-- <img src="img/perro.svg" alt="Imagen Perro" width="200%"/> -->
+		</div>
+		<div>
+			<h1>MOSTRAR UNA IMAGEN QUE NO ESTÁ EN LA CARPETA ACTUAL</h1>
+			<img src="../cuadro.png" alt="" width="10%"/>
+		</div>
+		<div>
+			<h1>MOSTRAR UNA IMAGEN DESDE UNA URL</h1>
+			<img src="https://iesaugustobriga.educarex.es/images/logos21/candil_resultado.jpg" 
+			alt="Radio el Candil" width="10%"/>
 		</div>
 	</body>
 </html>
