@@ -157,5 +157,56 @@
 			<img src="https://iesaugustobriga.educarex.es/images/logos21/candil_resultado.jpg" 
 			alt="Radio el Candil" width="10%"/>
 		</div>
+		<!-- MAPAS DE IMÁGEN -->
+		<h1>MAPAS DE IMAGEN</h1>
+		<!-- CARGAR MAPA -->
+		<img src="img/figura.png" alt="Mapa de imagen" usemap="#formas"/>
+		<!-- CREACIÓN DEL MAPA -->
+		<map id="formas" name="formas">
+			<!-- definir area de cabeza -->
+			<area shape="rect" coords="322,0,400,78" alt="cabeza" href="cabeza.html"/>
+			<area shape="circle" coords="296,280,30" alt="pieDerecho" href="pieD.html"/>
+			<area shape="poly" coords="166,80,322,80,321,233" alt="cuerpo" href="cuerpo.html"/>
+		</map>
+		
+		<!-- CANVAS -->
+		<h1>CANVAS</h1>
+		<div>
+			<canvas id="lienzo" width="400" height="400"/>
+			<script type="text/javascript">
+				var canvas = document.getElementById("lienzo");
+				var contexto = canvas.getContext("2d");
+				contexto.lineWidth = 2;			
+				for(i=0;i<400;i+=20){
+					contexto.moveTo(200,0);
+					contexto.lineTo(i,400);
+					contexto.strokeStyle="blue";
+					contexto.stroke();
+				}
+			</script>
+		</div>
+		<!-- TABLAS -->
+		<div>
+			<table>
+				<tr>
+					<td>Nº de Expediente</td>
+					<td>DNI</td>
+					<td>Nombre</td>
+					<td>Curso</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		<div>
 	</body>
 </html>
