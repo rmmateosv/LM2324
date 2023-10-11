@@ -187,7 +187,8 @@
 		</div>
 		<!-- TABLAS -->
 		<div>
-			<table>
+			<!-- Tabla de 3 x 4 con border-->
+			<table border="1" align="center" width="50%">
 				<tr>
 					<td>Nº de Expediente</td>
 					<td>DNI</td>
@@ -195,17 +196,53 @@
 					<td>Curso</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>1234</td>
+					<td>11111111T</td>
+					<td>José Martínez</td>
+					<td>1º DAM</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>9876</td>
+					<td>22222222A</td>
+					<td>María López</td>
+					<td>1º DAM</td>
 				</tr>
+			</table>
+			
+			<!-- Tabla con agrupaciones: cabecera, cuerpo y pie -->
+			<!-- rules: groups, cols, rows, all-->
+			<table border="1" rules="groups">
+				<caption>Ventas de libros en Extremadura del último trimestre</caption>
+				<thead>
+					<tr>
+						<td>Provincia</td>
+						<td>Octubre</td>
+						<td>Noviembre</td>
+						<td>Diciembre</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cáceres</td>
+						<td>1000</td>
+						<td>2000</td>
+						<td>3000</td>
+					</tr>
+					<tr>
+						<td>Badajoz</td>
+						<td>2000</td>
+						<td>1000</td>
+						<td>900</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Total</td>
+						<td>3000</td>
+						<td>3000</td>
+						<td>3900</td>
+					</tr>
+				</tfoot>
 			</table>
 		<div>
 	</body>
