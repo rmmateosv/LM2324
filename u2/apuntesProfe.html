@@ -293,7 +293,7 @@
 		<!-- FORMULARIOS -->
 		<h1>FORMULARIOS</h1>
 		<!-- method:post/get -->
-		<form action="pagina1.php" method="get">
+		<form action="pagina2.php" method="post">
 			<fieldset>				
 				<legend>Datos Personales</legend>
 				<div>
@@ -312,40 +312,57 @@
 					<label for="dni">DNI</label>				
 					<br/>					
 					<input id="dni" name="dni" type="text" placeholder="012345678A"
-					maxlength="9"/>
+					maxlength="9" required="required"/>
 				</div>
 				<div>
-					<label>Contraseña</label>
+					<label for="ps">Contraseña</label>
+					<br/>
+					<input id="ps" name="ps" type="password">	
+				</div>
+				<div>
+					<label for="curso">Curso</label>
+					<br/>
+					<input	id="curso" name="curso" type="number" value="1" step=""/>
+				</div>
+				<div>
+					<label for="fechaN">Fecha de Nacimiento</label>
+					<br/>
+					<input id="fechaN" name="fechaN" type="date" value="2000-01-01"/>	
+				</div>
+				<div>
+					<label for="fecha">Fecha de Matrícula</label>
+					<br/>
+					<input id="fecha" name="fecha" type="date"/>
+					<input id="hora" name="hora" type="time"/>					
+				</div>
+				<div>
+					<label for="telefono">Teléfono</label>
+					<input id="telefono" name="telefono" type="tel" placeholder="654 11 22 33"
+					pattern="[6-8][0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" maxlength="12" />
 					<br/>	
 				</div>
 				<div>
-					<label>Curso</label>
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" placeholder="aa@bb.com"/>
 					<br/>	
 				</div>
 				<div>
-					<label>Fecha de Nacimiento</label>
+					<label for="perfil">Perfil Linkedin</label>
+					<input id="perfil" name="perfil" type="url" placeholder="http://xxx"/>
 					<br/>	
 				</div>
 				<div>
-					<label>Teléfono</label>
-					<br/>	
-				</div>
-				<div>
-					<label>Email</label>
-					<br/>	
-				</div>
-				<div>
-					<label>Perfil Linkedin</label>
-					<br/>	
-				</div>
-				<div>
-					<label>Color Favorito</label>
-					<br/>	
+					<label for="color">Color Favorito</label>
+					<br/>
+					<input id="color" name="color" type="color" value="#0000FF"/>					
 				</div>
 			</fieldset>
 			<fieldset>
 				<legend>Datos Acedémicos</legend>
 			</fieldset>
+			
+			<!-- Botón que envía los datos del formulario al servidor-->
+			<input id="enviar" name="enviar" type="submit" value="Enviar"/>
 		</form>
 		
 	</body>
