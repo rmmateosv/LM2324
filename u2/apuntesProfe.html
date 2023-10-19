@@ -387,6 +387,42 @@
 					<input type="checkbox" id="bach" name="bach" checked="checked"/>Bachillerato
 					<input type="checkbox" id="otros" name="otros"/>Otros
 				</div>
+				<div>
+					<!-- LISTAS DESPLEGABLES: Solamente se puede seleccionar una opción -->
+					<label for="ley">Selecciona Legislación del Ciclo</label>
+					<br/>
+					<select id="ley" name="ley">
+						<option value="1">LOGSE</option>
+						<option value="2" selected="selected">LOE</option>
+						<option value="3">LOMLOE</option>
+					</select>
+				</div>
+				
+				<!-- LISTAS DE OPCIÓN MULTIPLE: Se puede seleccionar MÁS DE una opción -->
+				<div>
+					<label for="beca">Becas</label>
+					<br/>
+					<select id="beca" name="beca" multiple="multiple">
+						<!-- Si no ponemos value, el valor es lo que hay entre las etiquetas option-->
+						<option>Libros</option>
+						<option>Transporte</option>
+						<option>Residencia</option>
+					</select>
+				</div>
+				<!-- SELECTOR DE FICHERO -->
+				<div>
+					<label for="fichero">Selecciona Fichero</label>
+					<input type="file" id="fichero" name="fichero"/>
+				</div>
+				<!-- CAMPO DE TEXTO -->
+				<div>
+					<label for="comentario">Comentario</label>
+					<br/>
+					<textarea id="comentario" name="comentario" 
+					          placeholder="Escribe un comentario" 
+							  cols="20" rows="10"></textarea>
+				</div>
+				
 			</fieldset>
 			
 			
