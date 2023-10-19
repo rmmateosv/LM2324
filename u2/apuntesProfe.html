@@ -356,13 +356,40 @@
 					<br/>
 					<input id="color" name="color" type="color" value="#0000FF"/>					
 				</div>
+				<div>
+					<!-- Botón que envía los datos del formulario al servidor-->
+					<input id="enviar" name="enviar" type="submit" value="Enviar"/>
+					<input id="limpiar" name="limpiar" type="reset" value="Limpiar"/>
+					<input id="hm" name="hm" type="button" value="HolaMundo"
+					onclick="alert('Hola Mundo')"/>
+				</div>
+				<div>
+					<button id="enviar1" name="enviar1" type="submit">Enviar</button>
+					<button id="limpiar1" name="limpiar1" type="reset">Limpiar</button>
+					<button id="hm1" name="hm1" type="button" onclick="alert('Hola Mundo')">HolaMundo</button>
+				</div>				
 			</fieldset>
 			<fieldset>
 				<legend>Datos Acedémicos</legend>
+				<!-- RadioButtons, solamente puede haber uno seleccionado -->
+				<div>
+					<label for="ciclo">Selecciona ciclo</label>
+					<br/>
+					<input type ="radio" id="ciclo" name="ciclo" checked="checked"/>DAM
+					<input type ="radio" id="ciclo" name="ciclo"/>DAW
+					<input type ="radio" id="ciclo" name="ciclo"/>ASIR
+				</div>
+				<!-- CheckBox: se puede marcar más de uno a la vez -->
+				<div>
+					<label for="eso">Forma de acceso</label>
+					<br/>
+					<input type="checkbox" id="eso" name="eso"/>ESO
+					<input type="checkbox" id="bach" name="bach" checked="checked"/>Bachillerato
+					<input type="checkbox" id="otros" name="otros"/>Otros
+				</div>
 			</fieldset>
 			
-			<!-- Botón que envía los datos del formulario al servidor-->
-			<input id="enviar" name="enviar" type="submit" value="Enviar"/>
+			
 		</form>
 		
 	</body>
