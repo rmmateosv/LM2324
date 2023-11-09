@@ -20,3 +20,54 @@ h1{
 h1,footer{
 	text-align:center;
 }
+/* SELECTOR DE CLASE: .
+Selecciona todos los elementos de la clase especificada
+Es posible combinarlo con el selector de elemento: elemento.clase
+
+- Todos los elementos de la clase resaltar deben aparecer en negrita
+- Los párrafos de la clase resaltar deben aparecer subrayados
+*/
+.resaltar{
+	font-weight:bold;
+}
+
+p.resaltar{
+	text-decoration: underline;
+}
+/*
+SELECTOR DE ID: #
+Selecciona el elemento(solament debería haber 1) cuyo id es el seleccionado
+
+- Mostrar los id pie en color silver
+*/
+#pie{
+	color:silver;
+}
+
+/*
+SELECTOR DE LIMITACIÓN: Es un espacio en blanco. Selecciona todos los elementos (hijos) 
+que estén dentro de otro (padre). NO TIENEN POR QUÉ SER HIJOS DIRECTOS
+
+- El mapa del sitio debe salir en diferente color según el nivel de la viñeta. Rojo,Verde,Azul
+*/
+ul.mapa{
+	color: red;
+}
+ul.mapa ul{
+	color:green;
+}
+ul.mapa ul ul{
+	color:blue;
+}
+
+/*
+SELECTOR DE ATRIBUTO: elemento[atributo]|elemento[atributo="valor"]
+Se puede poner solamente que exista el atributo [atributo] o 
+que además se cheque el valor [atributo="valor"]
+
+- Las viñetas que contega el atributo type y el valor round deben aparecer en negrita
+- Cualquier viñeta que contenga el atributo type debe aparecer en cursiva
+*/
+ul[type]{
+	font-style: italic;
+}
