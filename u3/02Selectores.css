@@ -1,0 +1,22 @@
+/* SELECTORES */
+/* 
+SELECTOR UNIVERSAL: * -> Afecta a todos los elementos del html
+Hacer que todos los elementos de la página se muestren con el tipo de letra Arial
+*/
+* {
+	font-family: Arial;
+}
+
+/*
+SELECTOR DE ELEMENTO: Selecciona todos los elementos de la etiqueta definida.
+Se puede indicar más de un elemento separados por ,
+
+- Los títulos h1 deben salir en azul: Reglas de un elemento
+- Los títulos h1 y el footer deben salir centrados: Regla de dos elementos
+*/
+h1{
+	color:blue;
+}
+h1,footer{
+	text-align:center;
+}
