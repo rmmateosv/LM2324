@@ -65,9 +65,27 @@ SELECTOR DE ATRIBUTO: elemento[atributo]|elemento[atributo="valor"]
 Se puede poner solamente que exista el atributo [atributo] o 
 que además se cheque el valor [atributo="valor"]
 
-- Las viñetas que contega el atributo type y el valor round deben aparecer en negrita
 - Cualquier viñeta que contenga el atributo type debe aparecer en cursiva
+- Las viñetas que contega el atributo type y el valor round, deben aparecer en negrita
+- Los ul de la clase mapa y de tipo round deben tener un borde negro de 1 pixel
 */
 ul[type]{
 	font-style: italic;
 }
+
+ul[type="round"]{
+	font-weight: bold;
+}
+ul[type="round"][class="mapa"]{
+	border: 1px solid black;
+	
+}
+/*
+SELECTOR JERÁRQUICO: 
+eti1>eti2 Hijos directos
+eti1+eti2 Hermanos DIRECTOS
+eti1~eti2 Hermanos
+eti1:first_child Primer hijo
+eti1:last_child Último hijo
+eti1:empty Elementos vacíos
+*/
