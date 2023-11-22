@@ -90,11 +90,61 @@ eti1:last_child Último hijo
 eti1:empty Elementos vacíos
 
 - Los li que sean hijos directos de un ul de clase mapa deben aparecer subrayados
-- Los h1 hermanos directo de a deben salir subrayado
+- Los p hermanos directo de h1 deben salir subrayado
+- El primer hijo de un ul que es hermano directo de un párrafo debe salir en rojo y el 
+- último en naranja
 */
 ul.mapa>ul>li{
 	text-decoration:underline;
 }
-a+h1{
+h1+p{
 	text-decoration:underline;
+}
+
+p+ul>li:first-child{
+	color:#FF0000;
+}
+p+ul>li:last-child{
+	color:orange;
+}
+
+/*
+Pseudoclases:
+- Al pasar por encima de los enlaces debe aparacer un fondo cyan
+- Los enlaces no vistados salgan en color Verde
+- Al pasar por encima de los enlaces no vistadosdebe aparacer un fondo olive
+- Los enlaces visitados en color rojo sin subrayado
+- La primera letra del primer párrafo hermano directo de un h1 debe salir a tamaño 20pt
+*/
+a:hover{
+	background-color: cyan;
+}
+a:link{
+	color:#00FF00;
+}
+a:link:hover{
+	background-color:olive;
+}
+a:visited{
+	color:#FF0000;
+	text-decoration: none;
+}
+h1+p:first-letter{
+	font-size: 20pt;
+}
+
+/*
+- Cuando un campo tiene el foco su color de fondo será amarillo
+- Campos deshabilitados con color de texto rojo 
+- Las etiquetas de los campos chequeados deben tener un color de fondo cyan
+*/
+form :focus{
+	background-color:#FFFF00;
+}
+form :disabled{
+	color:red;
+}
+
+form :checked+label{
+	background-color:cyan;
 }
