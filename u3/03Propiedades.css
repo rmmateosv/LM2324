@@ -24,3 +24,21 @@ h1{
 h1{
 	font-family:"Old English Text MT",Calibri;
 }
+/* VAIRANTES */
+label{
+	font-variant: small-caps;
+}
+
+/* INTERLIENADO */
+ul{
+	line-height: 2;
+}
+
+/* SHORTHAD font 
+ Permite modificar todas las propiedades de fuente en una 
+	sola regla . Es importante el orden.
+	Solamente es obligatorio indicar el tamaño y el tipo de fuente
+*/
+th{
+	font: italic  small-caps 16pt/2 Arial;
+}
