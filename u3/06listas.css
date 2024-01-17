@@ -1,0 +1,17 @@
+/* 	PROPIEDADES DE LISTAS */
+ul{
+	/* Cambiamos el símbolo a números */
+	list-style-type: decimal;
+	/* Ponemos como símbolo una imagen */
+	list-style-image: url('img/icono.png');
+	list-style-position: inside;
+}
+li{
+	/* VISUALIZAR LOS ITEMS EN HORIZONTAL */
+	display: inline;
+}
+
+p{
+	/* VISUALIZAR P COMO VIÑETAS */
+	display: list-item;
+}
