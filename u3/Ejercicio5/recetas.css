@@ -50,7 +50,6 @@ section.envio h1{
 	color:white;
 }
 section.envio{
-	
 	color:white;
 	background: gray no-repeat url('img/cocinero.png') right center;
 }
@@ -84,3 +83,4 @@ body{
 }
 p+ul{
 	list-style-image:url('img/vineta.png');
+}

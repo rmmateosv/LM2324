@@ -1,0 +1,11 @@
+/* 	PROPIEDADES DE TAMAÑO DE CAJA */
+p.noticia1{
+	height: 200px;
+	width: 800px;
+	background-color: lightpink;
+}
+p.noticia2{
+	height: 200px;
+	max-width: 800px;
+	background-color: lightpink;
+}
