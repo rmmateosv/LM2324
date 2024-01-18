@@ -50,8 +50,9 @@ section.envio h1{
 	color:white;
 }
 section.envio{
-	background-color:grey;
+	
 	color:white;
+	background: gray no-repeat url('img/cocinero.png') right center;
 }
 
 ul.plato h2:first-letter{
@@ -81,3 +82,5 @@ body{
 .plato>li{
 	list-style-type:none;
 }
+p+ul{
+	list-style-image:url('img/vineta.png');
