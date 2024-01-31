@@ -1,0 +1,44 @@
+.citas{
+	width:95%;
+	height:900px;
+	background-color:#fbdeb5;
+	
+	
+}
+.citas>h1{
+	color:purple;
+}
+
+.cita{
+	width:200px;
+	height:200px;
+	background-color:#ffca94;
+	border:3px dashed #fb9b3b;
+	border-spacing:100px;
+	padding:5px 10px;
+	float:left;
+	margin: 10px 10px;
+}
+
+.citas p:first-letter{
+	font-size:20pt;
+	text-indent:20px;
+	vertical-align:text-top;	
+	color:#fb9b3b;
+	padding: 10px;
+}
+p{
+	text-align:justify;
+}
+
+
+.titulo{
+	position:relative;
+	top:-15px;
+	left:-13px;
+	width:100px;
+	height:20px;
+	background-color:#fb9b3b;
+	color:white;
+	padding-left:10px;
+}

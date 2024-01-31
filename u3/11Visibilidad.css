@@ -1,0 +1,14 @@
+/* 	VISIBILIDAD */
+p{
+	width: 30%;
+	height: 100px;
+	border: 1px solid red;
+	overflow:hidden; /*Lo que no entra en el marco, se oculta*/
+	overflow:scroll; /*Se muestra scroll siempre*/
+	overflow:auto; /*Se muestra scroll cuando es necesario*/
+}
+
+
+.noticia2{
+	visibility:hidden; /* Oculta el párrafo pero reserva su espacio*/
+}

@@ -1,0 +1,100 @@
+*{
+	font-family:Calibri;
+}
+h1{
+	text-align:center;
+	/*E4*/
+	font-size:xx-large;
+	text-shadow: 3px 3px 5px black;
+}
+header>h1{
+	color:rgb(0,0,255,0.4);
+}
+.tipoPlato h1{
+	color:green;
+}
+footer{
+	text-align:center;
+	color:silver;
+}
+.plato h2{
+	color:orange;
+	font-weight:bold;
+	word-spacing: 10px;
+}
+.plato>li:first-child{
+	background-color:beige;
+}
+.plato>li:last-child{
+	background-color:bisque;
+}
+.plato p+p{
+	font-weight:bold;
+}
+.plato p+p~p{
+	font-weight:bold;
+}
+#autor{
+	font-style:italic;
+}
+a:link{
+	color:green;
+}
+a:visited{
+	color:green;
+}
+a:link:hover{
+	color:red;
+}
+section.envio h1{
+	color:white;
+}
+section.envio{
+	color:white;
+	background: gray no-repeat url('img/cocinero.png') right center;
+	width:500px;
+	border: 10px ridge white;
+	padding:30px;
+}
+
+ul.plato h2:first-letter{
+	font-size:40pt;
+}
+form :focus{
+	background-color:yellow;
+}
+
+.indice a{
+	word-spacing:2px;
+}
+
+.plato h2+p{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-indent: 30px;
+}
+
+body{
+	background: #EDEFEB url('img/gorros.png') repeat-x
+}
+
+.indice li{
+	display:inline;
+	border: 2px solid green;
+	border-radius: 15px;
+	padding: 10px;
+	margin:0px 25px 0px 5px;
+}
+.indice li:hover{
+	background-color:rgb(255,255,255,0.5);
+}
+.plato>li{
+	list-style-type:none;
+	width:400px;
+	margin: 50px auto;
+	border:1px outset black;
+	padding:30px;
+}
+p+ul{
+	list-style-image:url('img/vineta.png');
+}

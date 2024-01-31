@@ -1,0 +1,8 @@
+
+li{
+	list-style-image:url("flecha_inactiva.png");
+	list-style-position: inside;
+}
+li:hover{
+	list-style-image:url("flecha_activa.png");
+}
