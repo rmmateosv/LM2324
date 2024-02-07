@@ -1,0 +1,19 @@
+div{
+	border: 1px solid red;
+	/*Hacer div flexbox*/
+	display:flex;
+}
+.contenedor1{
+	flex-direction: row; /*Comportamiento por defecto: Eje principal es el horizontal(row) */
+	flex-wrap:wrap-reverse;
+}
+.contenedor2{
+	flex-direction: column; /*Eje principal es el vertical*/
+	flex-wrap:wrap-reverse;
+	height:200px;
+}
+h1{
+	border: 1px solid blue;
+	width: 200px;
+	
+}
