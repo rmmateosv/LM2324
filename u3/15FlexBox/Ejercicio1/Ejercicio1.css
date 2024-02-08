@@ -1,0 +1,53 @@
+p{
+	border: 2px solid black;	
+	background-color:white;
+}
+#principal{
+	display:flex;
+	flex-direction:column;
+}
+#cabeceraPrincipal{
+	background-color:red;
+	display:flex;
+	flex-direction:row;
+}
+#cabeceraPrincipal p, #navPrincipal p{
+	width:100px;
+	margin: 10px;
+	height:30px;
+}
+
+#navPrincipal{
+	background-color:aqua;
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+}
+
+#zonaContenidos{
+	display:flex;
+	flex-direction:row;
+}
+
+#lateralIzq{
+	background-color: orange;
+	flex-grow:2;
+	display:flex;
+	flex-direction:column;
+	justify-content:center; /*Centra en vertical*/
+	align-items:center;/*Centra en horizontal*/
+}
+#zonaDatos{
+	flex-grow:8;
+}
+#zonaCentro{
+}
+#pieDatos{
+	background-color:purple;
+}
+#zona1{
+	background-color:pink;
+}
+#zona2{
+	background-color:green;
+}

@@ -5,8 +5,7 @@ div{
 }
 .contenedor1{
 	flex-direction: row; /*Comportamiento por defecto: Eje principal es el horizontal(row) */
-	flex-wrap:wrap;
-	justify-content:space-around;
+	justify-content:flex-start;
 	height: 400px;
 	align-items:center;
 }
@@ -22,4 +21,16 @@ h1{
 	border: 1px solid blue;
 	width: 200px;
 	
+}
+.contenedor1 h1:first-child{
+	color: blue;
+	flex-grow:1;
+}
+.contenedor1 h1:first-child+h1{
+	color: green;
+	flex-grow:2;
+}
+.contenedor1 h1:last-child{
+	color: blue;
+	flex-shrink:5;
 }
