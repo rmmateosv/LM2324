@@ -5,12 +5,18 @@ div{
 }
 .contenedor1{
 	flex-direction: row; /*Comportamiento por defecto: Eje principal es el horizontal(row) */
-	flex-wrap:wrap-reverse;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	height: 400px;
+	align-items:center;
 }
 .contenedor2{
 	flex-direction: column; /*Eje principal es el vertical*/
-	flex-wrap:wrap-reverse;
-	height:200px;
+	flex-wrap:wrap;
+	height:500px;
+	justify-content:space-evenly;
+	align-items:flex-end;
+
 }
 h1{
 	border: 1px solid blue;
