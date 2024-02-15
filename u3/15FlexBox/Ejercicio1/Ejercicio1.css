@@ -11,7 +11,7 @@ p{
 	display:flex;
 	flex-direction:row;
 }
-#cabeceraPrincipal p, #navPrincipal p{
+#cabeceraPrincipal p, #navPrincipal p, #pieDatos p{
 	width:100px;
 	margin: 10px;
 	height:30px;
@@ -31,23 +31,58 @@ p{
 
 #lateralIzq{
 	background-color: orange;
-	flex-grow:2;
+	flex-grow:2; /* Propiedad de flex-item, el elemento crece en función 
+	del tamaño de la ventana a una proporción de 2*/
 	display:flex;
 	flex-direction:column;
 	justify-content:center; /*Centra en vertical*/
 	align-items:center;/*Centra en horizontal*/
 }
+
+#lateralIzq p{
+	width:50px;
+	height:60px;
+}
 #zonaDatos{
-	flex-grow:8;
+	flex-grow:8; /* Propiedad de flex-item, el elemento crece en 
+	función del tamaño de la ventana a una proporción de 8*/
+	
+	display:flex;
+	flex-direction:column;
 }
 #zonaCentro{
+	display:flex;
+	flex-direction:row;
 }
 #pieDatos{
 	background-color:purple;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
 }
 #zona1{
+	flex-grow:1;
 	background-color:pink;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+#zona1 p{
+	width: 60px;
+	height: 80px;
+	margin: 10px;
 }
 #zona2{
+	flex-grow:1;
 	background-color:green;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	justify-content:center;
+}
+#zona2 p{
+	width: 60px;
+	height: 200px;
+	margin: 10px;
 }
