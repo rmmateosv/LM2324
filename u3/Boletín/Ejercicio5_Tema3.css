@@ -1,0 +1,33 @@
+
+li{
+	background-color:#F5CBA7;
+	color:#6E2C00;
+	/*Quitar símbolo de viñeta*/
+	list-style-type:none;
+	/*Convertir en elemento de bloque pero en la misma línea*/
+	display:inline-block;
+	/*Fijar ancho para que todos salgan del mismo tamaño*/
+	width:200px;
+	/*Alinear en eje y con el elemento más alto*/
+	vertical-align:top;
+	
+}
+
+li li{
+	/*Por defecto no aparecen*/
+	display:none;
+	/*Desplzar un poquito a la izquierda */
+	position:relative;
+	left:-40px;
+	
+}
+
+li:hover{
+	/*invertir colores*/
+	background-color:#6E2C00;
+	color:#F5CBA7;
+}
+
+li:hover li{
+	display:block;
+}

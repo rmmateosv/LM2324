@@ -1,0 +1,14 @@
+header, footer{
+	background-color:#999999;
+	color:white;
+	text-align:center;
+}
+footer{
+	height:50px;
+	padding-top:8px;
+}
+
+nav li{
+	list-style-type:none;
+	display:inline-block;
+}
