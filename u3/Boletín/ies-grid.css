@@ -28,14 +28,11 @@ nav a:hover{
 .izquierda, .derecha{
 	background-color:#CAFFFF;
 	width: 200px;
-	display:flex;
-	flex-direction:column;
-	align-items: center;
+
 }
 .contenido{
 	overflow:hidden;
 	height:400px;
-	flex-grow:1;
 }
 
 .contenido article{
@@ -87,7 +84,6 @@ nav a:hover{
 	display: inline-block;
 	width: 100px;
 	padding:50px;
-	/* 4 quitar text-align:center; */
 	background-image:conic-gradient(#CAFFFF, white);
 	transition: transform 2s linear 0s;
 }
@@ -98,26 +94,48 @@ nav a:hover{
 
 
 body{
-	display:flex;
-	flex-direction:column;
+	display:grid;
+	grid-template-columns: 200px auto 200px;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:"cab cab cab" "izda cont decha" "pie pie pie"
 }
 header{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
+	grid-area: cab;
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	justify-items:center;
+	
 }
-.principal{
-	display:flex;
-	flex-direction:row;
+.contenido{
+	grid-area: cont;
 }
 
-.izquierda aside, .derecha aside{  
-	display:flex;
-	flex-direction:column;
-	align-items: center;
+.izquierda{  
+	grid-area: izda;
 }
-footer{
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
+.derecha{  
+	grid-area: decha;
 }
+
+.izquierda aside{
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto;
+	justify-items:center;
+}
+.derecha aside{
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto auto auto;
+	justify-items:center;
+}
+footer{  
+	grid-area: pie;
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	justify-items:center;
+}
+
+
