@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas>
+	<factura>
+		<cab numeroF="1">
+			<cliente>1111111A</cliente>
+			<fecha>2024/02/28</fecha>
+		</cab>
+		<detalle>
+			<linea id="1">
+				<articulo codigo="A01" nombre="Ruedas Michelín" 
+				cantidad="2" precio="80"/>
+			</linea>
+			<linea id="2">
+				<articulo codigo="F02" nombre="Líquido de frenos" 
+				cantidad="1" precio="15.8"/>
+			</linea>
+		</detalle>
+	</factura>
+	<factura>
+	</factura>
+</facturas>

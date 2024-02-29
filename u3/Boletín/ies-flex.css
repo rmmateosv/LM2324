@@ -35,7 +35,6 @@ nav a:hover{
 .contenido{
 	overflow:hidden;
 	height:400px;
-	flex-grow:1;
 }
 
 .contenido article{
@@ -56,7 +55,9 @@ nav a:hover{
 	margin-bottom:5px;
 	animation: proyectos 10s linear 0s infinite normal;	
 }
-.derecha img{ 
+
+
+.derecha a{
 	display:block;
 	margin: 10px;
 	width:50px;
@@ -67,33 +68,11 @@ nav a:hover{
 }
 
 .derecha img:hover{
-	width:100px; 
+	width:50%;
 }
 
-.contenido h2{
-	color:#00AEAE;
-	text-shadow: 3px 3px 5px gray;
-}
 
-#inicio h3{
-	border:1px dashed #00AEAE;
-	box-shadow: 3px 3px 5px #00AEAE;
-	padding:10px;
-	border-radius:5px;
-}
 
-#cursos p{	
-	border-radius:200px;
-	display: inline-block;
-	width: 100px;
-	padding:50px;
-	/* 4 quitar text-align:center; */
-	background-image:conic-gradient(#CAFFFF, white);
-	transition: transform 2s linear 0s;
-}
-#cursos p:hover{		
-	transform:rotate(90deg);	
-}
 
 
 
@@ -109,15 +88,4 @@ header{
 .principal{
 	display:flex;
 	flex-direction:row;
-}
-
-.izquierda aside, .derecha aside{  
-	display:flex;
-	flex-direction:column;
-	align-items: center;
-}
-footer{
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
 }
