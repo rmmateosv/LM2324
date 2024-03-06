@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE facturas SYSTEM "facturas.dtd">
 <facturas>
 	<factura>
 		<cab numeroF="1">
 			<cliente>1111111A</cliente>
 			<fecha>2024/02/28</fecha>
+			<!-- elemento telfono o email -->
 		</cab>
 		<detalle>
 			<linea id="1">
@@ -15,6 +17,7 @@
 				cantidad="1" precio="15.8"/>
 			</linea>
 		</detalle>
+		<pagada/> <!-- ELEMENTO OPCIONAL, SÓLO SI ESTÁ PAGADA -->
 	</factura>
 	<factura>
 		<cab numeroF="2">

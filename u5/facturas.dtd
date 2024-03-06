@@ -1,0 +1,8 @@
+<!ELEMENT factura (cab,detalle,pagada?)>
+<!ELEMENT cab (cliente,fecha)>
+<!ELEMENT cliente #PCDATA>
+<!ELEMENT fecha #PCDATA>
+<!ELEMENT articulo EMPTY>
+<!ELEMENT linea (articulo)>
+<!ELEMENT facturas (factura+)>
+<!ELEMENT detalle (linea+)>
