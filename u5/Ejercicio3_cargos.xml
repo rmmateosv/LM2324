@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE lista_de_cargos[
+<!ELEMENT lista_de_cargos (cargo+)>
+<!ELEMENT cargo (uniforme)>
+<!ATTLIST cargo nombre CDATA #REQUIRED sueldo CDATA #REQUIRED >
+<!ELEMENT uniforme (gorro?,prenda_sup*,prenda_inf*)>
+<!ELEMENT gorro EMPTY>
+<!ATTLIST gorro tipo CDATA #REQUIRED color CDATA #REQUIRED>
+<!ELEMENT prenda_sup EMPTY>
+<!ATTLIST prenda_sup tipo CDATA #REQUIRED color CDATA #REQUIRED manga CDATA #IMPLIED>
+<!ELEMENT prenda_inf EMPTY>
+<!ATTLIST prenda_inf tipo CDATA #REQUIRED color CDATA #REQUIRED cierre CDATA #IMPLIED>
+]
+>
+<lista_de_cargos>
+	<cargo nombre="guru" sueldo="60000">
+		<uniforme>
+			<gorro tipo="turbante" color="rojo"/>
+			<prenda_sup tipo="chilaba" color="azul" manga="larga"/>
+		</uniforme>
+	</cargo>
+	<cargo nombre="operador" sueldo="4800">
+		<uniforme>
+			<gorro tipo="peineta" color="floreada" />
+		</uniforme>
+	</cargo>
+	<cargo nombre="programador" sueldo="40000">
+		<uniforme>
+			<prenda_sup tipo="camiseta" color="blind guardian" manga="corta"/>
+			<prenda_inf tipo="chandal" color="caqui" cierre="cuerda" />
+			<prenda_inf tipo="zapatos" color="negro" cierre="cordón" />
+		</uniforme>
+	</cargo>
+</lista_de_cargos>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE catalogoLibros[
+<!ELEMENT catalogoLibros (libro+)>
+<!ELEMENT libro (titulo, autores, editorial, resumen?)>
+<!ATTLIST libro isbn CDATA #REQUIRED>
+<!ATTLIST libro tipo ( divulgación | novela | infantil) #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autores (autor+,traductor?)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT traductor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+]
+>
+
+<catalogoLibros>
+	<libro isbn="I1" tipo="novela">
+		<titulo>Don Quijote de la Mancha</titulo>
+		<autores>
+			<autor>Migue de Cervantes</autor>
+			<traductor>Thomas Shelton</traductor>
+		</autores>
+		<editorial>Anaya</editorial>
+	</libro>
+</catalogoLibros>

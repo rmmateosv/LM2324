@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE geografia[
+<!ELEMENT geografia (continente+)>
+<!ELEMENT continente (pais+)>
+<!ATTLIST continente nombre CDATA #REQUIRED>
+<!ELEMENT pais (capital,numHabitantes,superficie?,lenguasOficiales)>
+<!ATTLIST pais nombre CDATA #REQUIRED>
+<!ELEMENT capital (#PCDATA)>
+<!ELEMENT numHabitantes (#PCDATA)>
+<!ELEMENT superficie (#PCDATA)>
+<!ELEMENT lenguasOficiales (lengua+)>
+<!ELEMENT lengua (#PCDATA)>
+<!ATTLIST lengua porcentajeHablantes CDATA #REQUIRED>
+]
+>
+<geografia>
+	<continente nombre="Europa">
+		<pais nombre="España">
+			<capital>Madrid</capital>
+			<numHabitantes>47000000</numHabitantes>
+			<superficie>12311222</superficie>
+			<lenguasOficiales>
+				<lengua porcentajeHablantes="98">Español</lengua>
+				<lengua porcentajeHablantes="20.5">Catalán </lengua>
+				<lengua porcentajeHablantes="3.9"> Vasco</lengua>
+				<lengua porcentajeHablantes="4.2">Gallego</lengua>
+			</lenguasOficiales>
+		</pais>
+		<pais nombre="Portugal">
+			<capital>Lisboa</capital>
+			<numHabitantes>15000000</numHabitantes>
+			<superficie>3112223</superficie>
+			<lenguasOficiales>
+				<lengua porcentajeHablantes="99.9">Portugués</lengua>
+			</lenguasOficiales>
+		</pais>
+	</continente>
+</geografia>
