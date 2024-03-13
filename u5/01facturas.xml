@@ -15,8 +15,8 @@
 <!ELEMENT detalle (linea+)>
 <!ELEMENT pagada EMPTY>
 ]
->
-<facturas>
+><facturas>
+
 	<factura>
 		<cab numeroF="F1">
 			<cliente>1111111A</cliente>
