@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE agenda[
+<!ELEMENT agenda (lista)>
+<!ELEMENT lista (contacto+)>
+<!ELEMENT contacto (nombre,telefonos,email*)>
+<!ATTLIST contacto id ID #REQUIRED grupo CDATA #IMPLIED sexo (M|F) #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT telefonos (telefono+)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+]
+>
+<agenda>
+	<lista>
+		<contacto id="c1" grupo="familia" sexo="F">
+			<nombre>Ana María</nombre>
+			<telefonos>
+				<telefono>927111111</telefono>
+			</telefonos>			
+			<email>ana@gmail.com</email>
+		</contacto>
+		<contacto id="c2" sexo="M">
+			<nombre>José María</nombre>
+			<telefonos>
+				<telefono>927222222</telefono>
+			</telefonos>		
+		</contacto>
+		<contacto id="c3" grupo="familia" sexo="F">
+			<nombre>Laura</nombre>
+			<telefonos>
+				<telefono>927333333</telefono>
+				<telefono>927444444</telefono>
+				<telefono>927444444</telefono>
+			</telefonos>		
+			<email>laura@gmail.com</email>
+			<email>laura@ies.com</email>
+		</contacto>
+	</lista>
+		
+</agenda>
