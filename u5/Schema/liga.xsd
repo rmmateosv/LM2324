@@ -7,7 +7,7 @@
 			<!-- DEFINICIÓN DE SECUENCIA DE ELEMENTOS -->
 			<xs:sequence>
 				<!-- LO DEFINIMOS DE FORMA LOCAL -->
-				<xs:element name="numero" type="xs:string"/>
+				<xs:element name="numero" type="tipoNumLiga"/>
 				<!-- Códigos y partidos los definimos de forma GLOBAL
 				por legiilidad del código o posible reutilización -->
 				<xs:element ref="codigos"/>
@@ -120,4 +120,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<xs:simpleType name="tipoNumLiga">
+		<xs:union memberTypes="xs:int xs:string"/>
+	</xs:simpleType>
 </xs:schema>
