@@ -50,7 +50,7 @@
 	<xs:element name="estadio">
 		<xs:complexType>
 			<xs:simpleContent>
-				<xs:extension base="xs:string">
+				<xs:extension base="miTexto20">
 					<xs:attribute name="codigo" type="xs:string" use="required"/>
 				</xs:extension>
 			</xs:simpleContent>
@@ -120,7 +120,17 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<!-- Definimos un tipo que admita un número entero
+		o un string-->	
 	<xs:simpleType name="tipoNumLiga">
 		<xs:union memberTypes="xs:int xs:string"/>
+	</xs:simpleType>
+	<!-- Definimos un tipo string que tenga mínimo 5
+	caracteres y máximo 20 -->
+	<xs:simpleType name="miTexto20">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+			<xs:minLength value="5"/>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
