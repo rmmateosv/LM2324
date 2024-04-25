@@ -24,11 +24,11 @@
 										<xs:element name="asignatura" minOccurs="0" maxOccurs="unbounded" type="tipoAsignatura"/>
 										<xs:element name="fin" type="xs:date" minOccurs="0"/>
 									</xs:sequence>
-									<xs:attribute name="curso" type="xs:int" use="required"/>
+									<xs:attribute name="curso" type="tipoCurso" use="required"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="ciclo" type="xs:string" use="required"/>
+						<xs:attribute name="ciclo" type="tipoCiclo" use="required"/>
 						<xs:attribute name="titula" type="xs:boolean" use="required"/>
 					</xs:complexType>
 				</xs:element>
@@ -37,21 +37,51 @@
 	</xs:element>
 	<xs:complexType name="tipoAsignatura">
 		<xs:attribute name="nombre" type="xs:string" use="required"/>
-		<xs:attribute name="nota" type="xs:int" use="required"/>
+		<xs:attribute name="nota" type="tipoNota" use="required"/>
 		<xs:attribute name="convalidada" type="xs:boolean" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="tipoContacto">
 		<xs:choice>
 			<xs:element name="telefono">
 				<xs:complexType>
-					<xs:attribute name="numero" type="xs:string" use="required"/>
+					<xs:attribute name="numero" type="tipoTel" use="required"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="email">
 				<xs:complexType>
-					<xs:attribute name="email" type="xs:string" use="required"/>
+					<xs:attribute name="email" type="tipoMail" use="required"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:choice>
 	</xs:complexType>
+	<xs:simpleType name="tipoCiclo">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SMR"/>
+			<xs:enumeration value="DAM"/>
+			<xs:enumeration value="DAW"/>
+			<xs:enumeration value="ASIR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoNota">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTel">
+		<xs:restriction base="xs:int">
+			<xs:totalDigits value="9"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoMail">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9]+\@[a-zA-Z0-9]+\.[a-z]{2,3}"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoCurso">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="2"/>			
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
