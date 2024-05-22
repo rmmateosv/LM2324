@@ -11,9 +11,18 @@
 		</gasolinerasExtremadura>
 		
 	</xsl:template>
+	<!-- Plantilla para nodos gasolinera-->
 	<xsl:template match="gasolinera">
 		<gasolinera>
 			<xsl:attribute name="compañia"><xsl:value-of select='./compañia'/></xsl:attribute>
+			<localidad>
+				<xsl:attribute name="provincia"><xsl:value-of select='localidad/@provincia'/></xsl:attribute>
+				<xsl:value-of select='localidad'/>
+			</localidad>
+			<ubicacion>
+				<xsl:value-of select='carretera'/>, KM: <xsl:value-of select='carretera/@puntoKilometrico'/>
+			</ubicacion>
+			<telefono><xsl:value-of select='telefono'/></telefono>
 		</gasolinera>
 	</xsl:template>
 </xsl:stylesheet>
