@@ -33,10 +33,7 @@
 				</xsl:for-each>
 			</body>
 		</html>
-	</xsl:template>
-	
-	
-	
+	</xsl:template>	
 	
 	<xsl:template match="servicio">
 		<li><xsl:value-of select="."/></li>
