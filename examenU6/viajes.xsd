@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="mayorista">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="direccion" type="tipoDir"/>
+				<xs:element name="telefono" type="tipoTel"/>
+				<xs:element name="viaje" type="tipoViaje" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipoDir">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoTel">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\+[0-9]{2} [0-9]{3}\-[0-9]{3}\-[0-9]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipoViaje">
+		<xs:sequence>
+			<xs:element name="destinos">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="destino" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="ciudad" type="xs:string" use="required"/>
+								<xs:attribute name="pais" type="xs:string" use="required"/>
+								<xs:attribute name="continente" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="precio">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:float">
+							<xs:attribute name="moneda" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="duracion" type="xs:string"/>
+			<xs:element name="visitas">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="visita" type="xs:string" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="alojamiento">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="hotel" type="tipoHotel" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="oferta" minOccurs="0">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="descuento" type="xs:string"/>
+						<xs:element name="bono" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="codigo" type="xs:ID" use="required"/>
+		<xs:attribute name="fechaInicio" type="xs:date" use="optional"/>
+		<xs:attribute name="fechaFin" type="xs:date" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="tipoHotel">
+		<xs:all>
+			<xs:element name="categoria">
+				<xs:complexType>
+					<xs:attribute name="estrellas" type="tipoCat" use="optional"/>
+					<xs:attribute name="llaves" type="tipoCat" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="direccion" type="tipoDir"/>
+			<xs:element name="web" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="url" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="nombre" type="xs:string" use="required"/>
+		<xs:attribute name="regimen" type="tipoR" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="tipoCat">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipoR">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PC"/>
+			<xs:enumeration value="MP"/>
+			<xs:enumeration value="AD"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
